@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+
+    // Write a function that takes a string of parentheses,
+    // and determines if the order of the parentheses is valid.
+    // The function should return true
+    // if the string is valid, and false if it's invalid.
+
+
+    const validParentheses = parens => {
+        let reg = /\(\)/g;
+        while (reg.test(parens)) {
+           parens = parens.replace(reg, '')
+        }
+        return parens === ''
+    }
+
+    console.log(validParentheses( "(()()))(" ))
+</script>
+</body>
+</html>

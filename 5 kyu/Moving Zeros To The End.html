@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+// Write an algorithm that takes an array and moves
+// all of the zeros to the end, preserving the order
+// of the other elements.
+
+const moveZeros = arr => {
+    let withoutZero = arr.filter(el => el !== 0)
+    arr.forEach(el => {
+        if (el === 0) withoutZero.push(el)
+    })
+    return withoutZero
+}
+
+console.log(moveZeros([1,2,0,1,0,1,0,3,0,1]))
+
+</script>
+</body>
+</html>
