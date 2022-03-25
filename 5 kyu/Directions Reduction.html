@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+// Write a function dirReduc which will take an array of strings and returns
+//  an array of strings with the needless directions removed (W<->E or S<->N side by side).
+
+// The Haskell version takes a list of directions with data Direction = North | East | West | South.
+// The Clojure version returns nil when the path is reduced to nothing.
+// The Rust version takes a slice of enum Direction {North, East, West, South}.
+// See more examples in "Sample Tests:"
+
+
+const dirReduc = arr => {
+    let road = /NORTHSOUTH|SOUTHNORTH|EASTWEST|WESTEAST/g
+    let arrString = arr.join('')
+    while (road.test(arrString)) {
+        arrString = arrString.replace(road , '')
+    }
+  return arrString.match(/(NORTH|SOUTH|EAST|WEST)/g)||[];
+}
+
+console.log(dirReduc(["NORTH", "SOUTH", "SOUTH", "EAST", "WEST", "NORTH", "WEST"]));
+
+    </script>
+</body>
+</html>
