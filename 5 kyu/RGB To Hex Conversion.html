@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+    // The rgb function is incomplete. Complete it so that passing in RGB
+    // decimal values will result in a hexadecimal representation being returned.
+    // Valid decimal values for RGB are 0 - 255. Any values that fall
+    // out of that range must be rounded to the closest valid value.
+
+    // Note: Your answer should always be 6 characters long,
+    // the shorthand with 3 will not work here.
+
+
+    const rgb = (r, g, b) => {
+        let arr = [r, g, b].map(el => el > 255 ? el = 255 : el < 0 ? el = 0 : el)
+        return arr.map(el => {
+            const hex = el.toString(16)
+            return hex.length === 1 ? '0' + hex : hex 
+        }).join('').toUpperCase()
+    }
+
+    console.log(rgb(-30,255,350));
+    </script>
+</body>
+</html>
