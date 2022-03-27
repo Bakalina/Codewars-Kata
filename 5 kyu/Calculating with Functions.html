@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+
+  // This time we want to write calculations using functions
+  // and get the results. Let's have a look at some examples:
+  // Requirements:
+  //
+  //     There must be a function for each number from 0 ("zero") to 9 ("nine")
+  // There must be a function for each of the following mathematical operations: plus, minus, times, dividedBy
+  // Each calculation consist of exactly one operation and two numbers
+  // The most outer function represents the left operand, the most inner function represents the right operand
+  // Division should be integer division. For example, this should return 2, not 2.666666...:
+
+
+
+  function zero() {
+      let res = 0 +''+arguments[0]
+      return arguments[0] ? Math.floor(eval(res)) : 0
+  }
+  function one() {
+      let res = 1 +''+arguments[0]
+      return arguments[0] ? Math.floor(eval(res)) : 1
+  }
+  function two() {
+      let res = 2 +''+arguments[0]
+      return arguments[0] ? Math.floor(eval(res)) : 2
+  }
+  function three() {
+      let res = 3 +''+arguments[0]
+      return arguments[0] ? Math.floor(eval(res)) : 3
+  }
+  function four() {
+      let res = 4 +''+arguments[0]
+      return arguments[0] ? Math.floor(eval(res)) : 4
+  }
+  function five() {
+      let res = 5 +''+arguments[0]
+      return arguments[0] ? Math.floor(eval(res)) : 5
+  }
+  function six() {
+      let res = 6 +''+arguments[0]
+      return arguments[0] ? Math.floor(eval(res)) : 6
+  }
+  function seven() {
+      let res = 7 +''+arguments[0]
+    return arguments[0] ? Math.floor(eval(res)) : 7
+  }
+  function eight() {
+      let res = 8 +''+arguments[0]
+      return arguments[0] ? Math.floor(eval(res)) : 8
+  }
+  function nine() {
+      let res = 9 +''+arguments[0]
+      return arguments[0] ? Math.floor(eval(res)) : 9
+  }
+
+  function plus() {
+      return `+${arguments[0]}`
+  }
+  function minus() {
+      return `-${arguments[0]}`
+  }
+  function times() {
+      return `*${arguments[0]}`
+  }
+  function dividedBy() {
+      return `/${arguments[0]}`
+  }
+
+  console.log(seven(times(five())))
+</script>
+</body>
+</html>
