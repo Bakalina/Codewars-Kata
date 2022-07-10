@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+
+<script>
+
+    // Simple, given a string of words, return the length of the shortest word(s).
+    // String will never be empty and you do not need to account for different data types.
+
+    const findShort = (s) => {
+        let masLeght = [];
+        s.split(' ').forEach((el) => masLeght.push(el.length))
+        return Math.min(...masLeght)
+    }
+
+
+    console.log(findShort("turns out random test cases are easier than writing out basic ones")) // 3
+
+</script>
+
+</body>
+</html>
